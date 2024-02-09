@@ -1,9 +1,9 @@
-
 <template>
     <lightning-card title="Check Shipment Status">
         <div class="slds-p-around_medium">
+            <lightning-input label="Tracking Number" value={trackNum} onchange={changeHandler}></lightning-input>
             <lightning-button label="Check Shipment" onclick={invokeApexMethod}></lightning-button>
-            <p>{apexResponse}</p>
+            <p>Shippment Status : {apexResponse}</p>
         </div>
     </lightning-card>
 </template>

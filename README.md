@@ -1,6 +1,17 @@
-# Salesforce DX Project: Next Steps
+# Background:
+Merz Aesthetics Customer Service representatives must quickly get the updated status of a customer shipment. When viewing the standard Shipment page in Salesforce, the rep wants to be able to view a Lightning Web Component that displays the latest status of the Shipment based on the tracking number of the Shipment record.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+# Project:
+Develop an LWC that calls the mock shipping status service defined below and displays the response to the end user.
+
+# Salesforce DX Project: Shipment Status
+
+# Steps followed: 
+Apex Class with method created for invoking the webservices. Enable the Remote Site Setting for the URL needs to be authorized to be invoked from Apex Class.
+Web Service returns XML tag with the tag response, unpack the xml value the return as string value.
+Create a LWC Component with accepting tracking number from the user and pass as paramter to Apex Class for invoking the Shipment URL and obtain the response. 
+Upon receiving the response from the Apex method render the shipment status back to the user.
+Add the LWC Component to the Sales and Contact pages for the visbility.
 
 ## How Do You Plan to Deploy Your Changes?
 
